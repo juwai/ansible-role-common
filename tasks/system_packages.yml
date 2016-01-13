@@ -17,13 +17,13 @@
   when: system_packages is defined
 
 # Install MySQL related packages
-- name: ensuer mysql-devel present
+- name: ensure mysql-devel present
   yum:
     name: mysql-devel
     state: present
   when: ansible_distribution != 'Amazon'
 
-- name: ensuer mysql-devel present
+- name: ensure mysql-devel present
   yum:
     name: "{{ item }}"
     state: present
