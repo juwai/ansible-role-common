@@ -31,3 +31,8 @@
     - mysql55
     - mysql55-devel
   when: ansible_distribution == 'Amazon'
+
+- name: ensure latest version of curl is installed
+  yum:
+    name: curl
+    state: latest
