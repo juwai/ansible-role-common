@@ -5,15 +5,15 @@
 
 - name: ensure pre-defined default packages present
   yum:
-    name: "{{ item }}"
+    name: '{{ item }}'
     state: present
-  with_items: __system_packages
+  with_items: '{{ __system_packages }}'
 
 - name: ensure user-defined basic packages present
   yum:
-    name: "{{ item }}"
+    name: '{{ item }}'
     state: present
-  with_items: system_packages
+  with_items: '{{ system_packages }}'
   when: system_packages is defined
 
 # Install MySQL related packages
@@ -25,7 +25,7 @@
 
 - name: ensure mysql-devel present
   yum:
-    name: "{{ item }}"
+    name: '{{ item }}'
     state: present
   with_items:
     - mysql55
