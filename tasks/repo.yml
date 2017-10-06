@@ -3,7 +3,7 @@
   yum:
     name: https://mirror.webtatic.com/yum/el6/latest.rpm
     state: present
-  when: env == 'vagrant'
+  when: ansible_distribution != 'Amazon'
 
 - name: update packages
   yum:
