@@ -1,12 +1,12 @@
 Ansible Role: Common
 =========
 
-Configure locale/repo/timezone and install some necessary packages on CentOS servers.
+Configure locale/repo/timezone and install some necessary packages on CentOS or Amazon Linux.
 
 Requirements
 ------------
 
-Written in Ansible 1.9.*
+Written in Ansible 2.3.*
 
 Role Variables
 --------------
