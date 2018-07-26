@@ -5,3 +5,15 @@
     dest: /etc/localtime
     state: link
     force: yes
+
+- name: clock file exist or not
+  shell: ls /etc/sysconfig/clock
+  ignore_errors: True
+  register: result
+
+- name: Set sysconfig clock
+  lineinfile:
+    dest: /etc/sysconfig/clock
+    regexp: '^ZONE='
+    line: 'ZONE="{{ timezone }}"'
+  when: result|succeeded
