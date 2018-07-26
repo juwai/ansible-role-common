@@ -16,4 +16,4 @@
     dest: /etc/sysconfig/clock
     regexp: '^ZONE='
     line: 'ZONE="{{ timezone }}"'
-  when: result|succeeded
+  when: result is succeeded
