@@ -41,7 +41,7 @@ Note: this won't override pre-defined `__system_packages`.
 
 ### env
 
-Define env to `vagrant` would install webtatic repo.
+Environment name.
 
 Default is `vagrant`.
 
